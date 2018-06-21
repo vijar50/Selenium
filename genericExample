@@ -34,7 +34,6 @@ public class PG1 {
             System.out.println("Test Failed");
         }
        
-        //close Fire fox
         driver.close();
        
     }
