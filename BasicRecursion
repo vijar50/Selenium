@@ -4,6 +4,8 @@ public class Recursion{
         printNumbers(5);
         System.out.println("CatEyes " + catEyes(5));
         System.out.println("Power " + power(3,4));
+        System.out.println("Factorial " + factorial(4));
+        System.out.println("Fibonacci " + fibonacci(8));
      }
      
      public static void printNumbers(int num){
@@ -31,6 +33,28 @@ public class Recursion{
              return base;
          } else{
              return base * power(base, num-1);
+         }
+     }
+     
+     public static int factorial(int num){
+         //returns factorial of num, product of num * all numbers below it.
+         if(num == 0 || num == 1){
+             return 1;
+         }else{
+             return num * factorial(num-1);
+         }
+     }
+     
+     public static int fibonacci(int num){
+         //prints the position of num in the fib sequence
+         if(num == 0){
+             return 0;
+         }//double base case. 1 + 0 = 1
+         if(num == 1){
+             return 1;
+         }else{
+             //fib is summation of previous 2 numbers
+             return fibonacci(num - 1) + fibonacci(num - 2);
          }
      }
 }
