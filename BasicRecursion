@@ -1,15 +1,36 @@
 public class Recursion{
 
      public static void main(String []args){
-        printNumbers(10);
+        printNumbers(5);
+        System.out.println("CatEyes " + catEyes(5));
+        System.out.println("Power " + power(3,4));
      }
      
      public static void printNumbers(int num){
+         //Takes a value and returns descending numbers till 0 case
          if(num == 0){
              return;
          } else{
              System.out.println(num);
              printNumbers(num - 1);
+         }
+     }
+     
+     public static int catEyes(int cats){
+         //Takes a value and returns value * 2
+         if(cats==0){
+             return 0;
+         }else{
+             return 3 + catEyes(cats-1);
+         }
+     }
+     
+     public static int power(int base, int num){
+         //Base is a number, num is the power of that num, this func calculates
+         if(num == 1){
+             return base;
+         } else{
+             return base * power(base, num-1);
          }
      }
 }
